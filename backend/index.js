@@ -25,6 +25,10 @@ app.get('/' , (req,res)=>{
   res.send("hey world")
 })
 
+aap.get('/test' , (req,res)=>{
+  res.send("hey it me ")
+})
+
 
 
 app.listen(port , (Error)=>{

@@ -13,7 +13,7 @@ const AddUser = () => {
     }
 
     try {
-      await axios.post('https://task-leadboard.vercel.app/api/users/add', { name });
+      await axios.post('https://leadboard12.netlify.app/api/users/add', { name });
       navigate('/'); // Redirect to home page after adding the user
     } catch (error) {
       console.error('Error adding user:', error);

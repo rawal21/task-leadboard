@@ -17,7 +17,7 @@ const PointsHistory = ({ userId }) => {
 
       try {
         
-        const response = await axios.get(`https://task-leadboard.vercel.app/api/users/${userId}/points-history`);
+        const response = await axios.get(`https://leadboard12.netlify.app/api/users/${userId}/points-history`);
         setHistory(response.data);
         setLoading(false);
       } catch (err) {

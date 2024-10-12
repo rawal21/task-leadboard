@@ -13,7 +13,7 @@ const App = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('https://task-leadboard.vercel.app/api/users/users'); 
+      const response = await axios.get('https://leadboard12.netlify.app/api/users/users'); 
       setUsers(response.data);
     } catch (error) {
       console.error('Error fetching users:', error);
