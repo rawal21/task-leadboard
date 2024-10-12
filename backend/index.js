@@ -10,7 +10,11 @@ const port = 3000;
 const MONGO_Url = process.env.MONGO_Url;
 
 app.use(express.json());
-app.use(cors()); // Allow all origins
+const cors = require('cors');
+// Allow requests from Netlify domain
+app.use(cors({ origin: 'https://voluble-dasik-dd017e.netlify.app/' }));
+
+// app.use(cors()); // Allow all origins
 app.use('/api/users', userRoutes);
 mongoose.connect(MONGO_Url).then(() => {
   console.log('Connected to MongoDB');
