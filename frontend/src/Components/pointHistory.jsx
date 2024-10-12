@@ -6,7 +6,7 @@ const PointsHistory = ({ userId }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch points history when the component mounts
+  
   useEffect(() => {
     const fetchHistory = async () => {
       if (!userId) {
@@ -16,8 +16,8 @@ const PointsHistory = ({ userId }) => {
       }
 
       try {
-        // Ensure to use the correct port (5000 for your backend)
-        const response = await axios.get(`task-leadboard.vercel.app/api/users/${userId}/points-history`);
+        
+        const response = await axios.get(`https://task-leadboard.vercel.app/api/users/${userId}/points-history`);
         setHistory(response.data);
         setLoading(false);
       } catch (err) {

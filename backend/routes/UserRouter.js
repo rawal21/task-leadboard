@@ -53,7 +53,7 @@ router.post('/claim-points', async (req, res) => {
     const pointsLog = new PointsHistory({
       userId: user._id,
       points: randomPoints,
-      claimedAt: new Date() // Ensure this field is captured
+      claimedAt: new Date() 
     });
     await pointsLog.save();
 

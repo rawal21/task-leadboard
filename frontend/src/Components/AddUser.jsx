@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 const AddUser = () => {
   const [name, setName] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleAddUser = async () => {
     if (!name.trim()) {
@@ -13,7 +13,7 @@ const AddUser = () => {
     }
 
     try {
-      await axios.post('task-leadboard.vercel.app/api/users/add', { name });
+      await axios.post('https://task-leadboard.vercel.app/api/users/add', { name });
       navigate('/'); // Redirect to home page after adding the user
     } catch (error) {
       console.error('Error adding user:', error);

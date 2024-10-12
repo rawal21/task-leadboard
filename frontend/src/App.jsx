@@ -3,24 +3,18 @@ import axios from 'axios';
 import UserSelection from './Components/UserSelection';
 import ClaimPoints from './Components/ClaimPoints';
 import Leaderboard from './Components/Leaderboard';
-import PointHistory from './Components/pointHistory'; // Ensure the case matches
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import './App.css'; // Optional: for custom styles
+import PointHistory from './Components/pointHistory'; 
+import {  Link } from 'react-router-dom';
+import './App.css'; 
 
 const App = () => {
   const [users, setUsers] = useState([]);
-  const [selectedUserId, setSelectedUserId] = useState(''); // Initial state can remain as an empty string
+  const [selectedUserId, setSelectedUserId] = useState(''); 
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('task-leadboard.vercel.app/api/users/users'); // Ensure correct endpoint
+      const response = await axios.get('https://task-leadboard.vercel.app/api/users/users'); 
       setUsers(response.data);
-
-      // Set default user "Rinkal" as selected user
-      const defaultUser = response.data.find(user => user.name === 'Rinkal');
-      if (defaultUser) {
-        setSelectedUserId(defaultUser._id); // Set default user ID if found
-      }
     } catch (error) {
       console.error('Error fetching users:', error);
     }
