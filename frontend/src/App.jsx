@@ -13,7 +13,7 @@ const App = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/users/users'); // Ensure correct endpoint
+      const response = await axios.get('task-leadboard.vercel.app/api/users/users'); // Ensure correct endpoint
       setUsers(response.data);
 
       // Set default user "Rinkal" as selected user

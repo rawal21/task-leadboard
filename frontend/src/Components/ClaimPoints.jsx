@@ -9,7 +9,7 @@ const ClaimPoints = ({ selectedUserId, fetchUsers }) => {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/users/claim-points', { userId: selectedUserId });
+      await axios.post('task-leadboard.vercel.app/api/users/claim-points', { userId: selectedUserId });
       fetchUsers(); // Refresh the user list
     } catch (error) {
       console.error('Error claiming points:', error);

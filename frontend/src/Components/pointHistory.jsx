@@ -17,7 +17,7 @@ const PointsHistory = ({ userId }) => {
 
       try {
         // Ensure to use the correct port (5000 for your backend)
-        const response = await axios.get(`http://localhost:3000/api/users/${userId}/points-history`);
+        const response = await axios.get(`task-leadboard.vercel.app/api/users/${userId}/points-history`);
         setHistory(response.data);
         setLoading(false);
       } catch (err) {
